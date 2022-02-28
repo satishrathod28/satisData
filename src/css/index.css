@@ -1,0 +1,61 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainDiv {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid rgb(58, 32, 32);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 10px;
+}
+input#list {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 30px;
+    padding: 15px;
+}
+i.fa.fa-plus {
+    position: absolute;
+    right: 84px;
+    top: 22px;
+}
+.inputData{
+    position: relative;
+}    
+.css-i4bv87-MuiSvgIcon-root {
+    height: 2em !important;
+    width: 10em !important;
+}
+
+.well {
+    min-height: 20px;
+    margin: 0 auto;
+    background-color: #377091;
+    border-radius: 5px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
+i.fa.fa-file {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+}
+i.fa.fa-trash-o {
+    position: absolute;
+    right: 38px;
+    top: 12px;
+}
+.relative{
+    position: relative;
+}
