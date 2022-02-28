@@ -26,6 +26,12 @@ i.fa.fa-plus {
     right: 84px;
     top: 22px;
 }
+i.fa.fa-edit {
+    position: absolute;
+    right: 84px;
+    top: 22px;
+}
+
 .inputData{
     position: relative;
 }    
@@ -39,6 +45,7 @@ i.fa.fa-plus {
     margin: 0 auto;
     background-color: #377091;
     border-radius: 5px;
+    color: #fff;
 }
 .mt15{
     margin-top: 15px;
@@ -50,11 +57,20 @@ i.fa.fa-file {
     position: absolute;
     right: 15px;
     top: 12px;
+    cursor: pointer;
+}
+i.fa.fa-file:hover {
+color: greenyellow;
 }
 i.fa.fa-trash-o {
     position: absolute;
     right: 38px;
     top: 12px;
+
+}
+i.fa.fa-trash-o:hover{
+    color:red;
+    cursor: pointer;
 }
 .relative{
     position: relative;
