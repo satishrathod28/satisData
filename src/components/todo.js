@@ -1,13 +1,25 @@
 import { FormControlUnstyledContext } from '@mui/base';
-import ListAltIcon from '@mui/icons-material/ListAlt';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/index.css'; 
+const getLocalData = () =>{
+    let list = localStorage.getItem('lists');
+    if(list){
+       return JSON.parse(localStorage.getItem('lists'))
+    }
+    else{
+        return []
+    }
+    console.log(list);
+}
+
 const Todo = () =>{
      const [initial, setInitial] = useState('');
-     const [updateData, setUpdateData] = useState([]);
+     const [updateData, setUpdateData] = useState(getLocalData());
      const [isId, setIsId]  = useState(null);
-     const [isToggle, setIsToggle] = useState(true)
-     const addData = () =>{
+     const [isToggle, setIsToggle] = useState(true);
+ 
+   
+      const addData = () =>{
       if(initial == ""){
          alert("Please fill the Data");
       }
@@ -48,11 +60,17 @@ const Todo = () =>{
      setIsToggle(false)
       setIsId(id)
      }
+   
+    useEffect(()=>{
+        localStorage.setItem('lists', JSON.stringify(updateData))
+    },[updateData]) 
+    
+   
 return(
 <>
 <div className='mainDiv'>
-<ListAltIcon />
-<h1>Add your List Here</h1>
+<span><i className="fa fa-address-card" ></i></span>
+<h2> Add your list here</h2>
 <div className='inputData'>
 <input type="text" name="list" id="list" className='mt15' value ={initial}
  onChange={(event)=> setInitial(event.target.value)}/>
@@ -68,9 +86,9 @@ return(
     updateData.map((currElement)=>{
         return (
             <>
-             <div className='well well-sm mt15 mb15 text-left mt15 mb15 relative' key={currElement.id}>{currElement.name}
+            <div className="well well-sm mt15 mb15 text-left mt15 mb15 relative strikeData" key={currElement.id}>{currElement.name}
              <i className="fa fa-file" onClick={() => editData(currElement.id)} title="Edit List"></i> 
-                 <i className="fa fa-trash-o" onClick={() => deleteData(currElement.id)} title={`Remove ${currElement.name}`}></i> </div>
+                 < i className="fa fa-trash-o" onClick={() => deleteData(currElement.id)} title={`Remove ${currElement.name}`}></i> </div>
             </>
         )
     })

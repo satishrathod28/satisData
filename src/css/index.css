@@ -6,12 +6,19 @@
 }
 .mainDiv {
     width: 100%;
-    max-width: 400px;
-    border: 2px solid rgb(58, 32, 32);
+    max-width: 420px;
+    border: 2px solid #377091;
     display: block;
     margin: 0 auto;
     text-align: center;
     padding: 30px 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 input#list {
     width: 100%;
@@ -71,6 +78,13 @@ i.fa.fa-trash-o {
 i.fa.fa-trash-o:hover{
     color:red;
     cursor: pointer;
+}
+.fa-address-card{
+    font-size:48px;
+    color: #377091;
+    }
+.strike{
+    text-decoration: line-through;
 }
 .relative{
     position: relative;
