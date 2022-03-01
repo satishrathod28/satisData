@@ -28,16 +28,12 @@ input#list {
     height: 30px;
     padding: 15px;
 }
-i.fa.fa-plus {
+i.fa.fa-plus, i.fa.fa-edit {
     position: absolute;
     right: 84px;
-    top: 22px;
+    top: 24px;
 }
-i.fa.fa-edit {
-    position: absolute;
-    right: 84px;
-    top: 22px;
-}
+ 
 
 .inputData{
     position: relative;
@@ -89,3 +85,11 @@ i.fa.fa-trash-o:hover{
 .relative{
     position: relative;
 }
+@media screen and (max-width: 420px) {
+    i.fa.fa-plus, i.fa.fa-edit {
+        right: 36px;
+        top: 22px;
+    }
+    .mainDiv {
+        max-width: 420px;    
+  }}
