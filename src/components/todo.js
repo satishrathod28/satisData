@@ -1,6 +1,16 @@
 import { FormControlUnstyledContext } from '@mui/base';
 import React, { useEffect, useState } from 'react';
 import '../css/index.css'; 
+
+fetch("https://codetogo.io/api/users.xml")
+  .then(response => response.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data, "application/xml");
+    console.log(xml);
+  })
+  .catch(console.error);
+  
 const getLocalData = () =>{
     let list = localStorage.getItem('lists');
     if(list){
